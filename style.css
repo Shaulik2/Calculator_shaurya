@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*calculator box */
+.Calculator {
+    width: 360px;
+    padding: 25px;
+    background-color: #111113;
+    border: 1px solid #292929;
+    border-radius: 25px;
+    
+}
+
+/* Calculator heading */
+.Calculator h1 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+/*Display*/
+#display {
+    width: 100%;
+    height: 150px;
+    background: transparent;
+    border: 1px solid #383838;
+    outline: none;
+    color: white;
+    font-size: 40px;
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+/* Arranging buttons*/
+.button {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+/* styling for all buttons */
+.button button {
+    width: 100%;
+    height: 65px;
+    border: none;
+    border-radius: 50%;
+    background: #19191b;
+    color: white;
+    font-size: 27px;
+}
+
+/* Different background for operator buttons */
+.button button:nth-child(4n) {
+    background: #292929;
+}
+
+/* Styling AC and Delete buttons */
+.button button:nth-child(1),
+.button button:nth-child(2) {
+    color: #e66b72;
+    font-size: 20px;
+}
+
+/* styling equal button*/
+.button button:nth-child(19) {
+    background: #168477;
+    color: white;
+}
+
+/* Adjusting the position of the last row */
+.button button:nth-child(17) {
+    grid-column: 2;
+}
+
+.button button:nth-child(18) {
+    grid-column: 3;
+}
+
+.button button:nth-child(19) {
+    grid-column: 4;
+}
+
+/* Button hover effect */
+.button button:hover {
+    background: #383838;
+}
+.button button:nth-child(19):hover {
+    background: #20a090;
+    color: white;
+}
+
+
+
