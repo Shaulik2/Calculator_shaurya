@@ -1,3 +1,4 @@
+
 let display = document.getElementById("display");
 
 let buttons = document.querySelectorAll(".button button");
@@ -57,6 +58,7 @@ buttons.forEach(function(button) {
                 }
 
                 else if (operator === "/") {
+
                     if (num2 === 0) {
                         display.value = "Cannot divide by zero";
                         firstNumber = "";
@@ -79,20 +81,22 @@ buttons.forEach(function(button) {
         // Select operator
         else if (value === "+" || value === "-" || value === "*" || value === "/") {
 
-            if (display.value !== "") {
+            if (display.value !== "" && !isNaN(display.value)) {
                 firstNumber = display.value;
                 operator = value;
                 display.value = "";
             }
         }
 
-        // Enter numbers and decimal
+        // Enter numbers, 00 and decimal
         else {
 
+            // Prevent multiple decimal points
             if (value === "." && display.value.includes(".")) {
                 return;
             }
 
+            // Add number or 00 to display
             display.value = display.value + value;
         }
 
